@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+<head>
+    <meta charset="UTF-8">
+    <title>Realidad Aumentada 04</title>
+    <!-- Incluimos la librería A-Frame -->
+    <script src="https://aframe.io/releases/0.6.0/aframe.min.js"></script>
+    <!-- Incluimos ar.js para A-Frame -->
+    <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
+</head>
+<body style='margin : 0px; overflow: hidden;'>
+  <a-scene embedded="" arjs="" class="" canvas="" inspector="" keyboard-shortcuts="" screenshot="" vr-mode-ui="">
+    <!--Cuerpo del avión-->
+    <a-cone id="fuselaje" position="0 0.831 0.947" rotation="-95 0 0" color="gold" scale="0.5 3.5 0.5"  shadow></a-cone>
+    <a-box id="fuselaje2" position="0 1 3.63" rotation="0 0 0" color="gold" scale="1 1 2"  shadow></a-box>
+    <a-cone id="nariz" position="0 0.881 5.249" rotation="90 0 0" color="gold" scale="0.5 1.25 0.4"  shadow></a-cone>
+    <!--Alas-->
+    <a-box id="ala principal" position="0 1.56 3.6" rotation="0 0 0" color="gray" scale="10 0.15 1.5" shadow></a-box>
+    <a-box id="alas atras" position="0 0.67 -0.69" rotation="0 0 0" color="gray" scale="3.5 0.15 1.1" shadow></a-box>
+    <a-box id="estabilizador" position="0 1.178 -0.84" rotation="-10 0 90" color="gray" scale="1 0.15 1" shadow></a-box>
+    <a-box id="flaps" position="0 1.45 2.5" rotation="-25 0 0" color="darkgray" scale="10 0.15 0.5" shadow></a-box>
+    <!--Motores-->
+    <a-box id="helice 1" position="0 1.215 5.639" rotation="0 125 90" color="black" scale="0.875 0.075 0.25" shadow></a-box>
+    <a-box id="helice 2" position="0 0.508 5.68" rotation="0 55 90" color="black" scale="0.875 0.075 0.25" shadow></a-box>
+    <!--Tren de aterrizaje simple por razones obvias-->
+    <!--Tren frontal-->
+  <a-cylinder id="frontal 1" position="0.575 0.147 4.246" rotation="35 -25 0" scale="0.075 1 0.075" color="gray"></a-cylinder>
+  <a-cylinder id="frontal 2" position="-0.575 0.147 4.246" rotation="35 25 0" scale="0.075 1 0.075" color="gray"></a-cylinder>
+  <a-cylinder id="frontal 3" position="0.575 0.179 3.61" rotation="-35 25 0" scale="0.075 1 0.075" color="gray"></a-cylinder>
+  <a-cylinder id="frontal 4" position="-0.575 0.179 3.61" rotation="-35 -25 0" scale="0.075 1 0.075" color="gray"></a-cylinder>      
+  <a-cylinder id="eje" position="0 -0.29 3.85" rotation="0 0 90" scale="0.1 2 0.1" color="gray"></a-cylinder>
+  <a-torus id="rueda 1" position="1.037 -0.3 3.84" rotation="0 90 0" scale="0.3 0.3 0.4" color="black"></a-torus>
+  <a-torus id="rueda 2" position="-1.037 -0.3 3.84" rotation="0 90 0" scale="0.3 0.3 0.4" color="black"></a-torus>
+  <a-cylinder id="rueda 1-1" position="1.037 -0.3 3.84" rotation="0 0 90" scale="0.3 0.3 0.3" color="black"></a-cylinder>
+  <a-cylinder id="rueda 1-2" position="-1.037 -0.3 3.84" rotation="0 0 90" scale="0.3 0.3 0.3" color="black"></a-cylinder>
+  <!--Tren trasero-->
+  <a-cylinder id="eje atras" position="0.022 0.459 -0.453" rotation="25 0 0" scale="0.05 0.5 0.05" color="gray"></a-cylinder>
+  <a-torus id="rueda 3" position="0 0.136 -0.526" rotation="0 90 0" scale="0.15 0.15 0.25" color="black"></a-torus>
+  <a-cylinder id="rueda 3-1" position="0 0.136 -0.526" rotation="0 0 90" scale="0.15 0.15 0.15a" color="black"></a-cylinder>
+    <!-- Definimos una cámara asociada a nuestro marcador -->
+    <a-marker-camera preset='hiro'></a-marker-camera>
+  </a-scene>  
+</body>
+</html>

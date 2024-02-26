@@ -1,0 +1,35 @@
+<!doctype HTML>
+<html>
+	<script src="https://aframe.io/releases/0.6.1/aframe.min.js"></script>
+	<script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.0/aframe/build/aframe-ar.js"> </script>
+
+    <!-- start the body of your page -->
+    <body style='margin : 0px; overflow: hidden;'>
+        <!-- add some info at the top of the page -->
+        <div style='position: fixed; top: 10px; width:100%; text-align: center; z-index: 1;'>
+             Uhhh.... :D<a href='https://youtu.be/Z4tsxrheEJw' target='_blank'>@DaIsKy01</a>
+        </div>
+
+        <!-- Define your 3d scene and enabled ar.js -->
+        <a-scene embedded arjs='trackingMethod: best;'>
+
+            <!-- Create a anchor to attach your augmented reality -->
+            <a-anchor hit-testing-enabled='true'>
+                
+                <a-text position='-1 1 -1' value="A"></a-text>
+                <!-- Add your augmented reality here -->
+                <a-box position='0 0.5 0' material='opacity: 0.5; side:double; color:blue;'>
+                    <a-cylinder radius='0.26' radius-tubular='0.02'>
+                        <a-animation attribute="rotation" to="360 200 0" dur="5000" easing='linear' repeat="indefinite"></a-animation>
+                    </a-cylinder>
+                </a-box>
+
+            </a-anchor>
+
+            <!-- Define a static camera -->
+            <a-camera-static/>
+
+        </a-scene>
+    </body>
+
+</html>

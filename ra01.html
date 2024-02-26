@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Realidad Aumentada 01</title>
+    <meta name="description" content="Hello, WebVR! - A-Frame">
+    <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      <!--Cuerpo del avión-->
+      <a-cylinder id="fuselaje" position="0 6 0" rotation="90 0 0" radius="3" height="45" color="white" shadow></a-cylinder>
+      <a-cone id="morro1" position="0 5.51 24.7" rotation="90 0 0" radius="3" scale="3 4.5 2.5" color="white"></a-cone>
+      <a-cone id="morro2" position="0 6 24" rotation="90 0 0" radius="3" scale="3 3 3" color="white"></a-cone>
+      <a-sphere id="cristal" position="0 6.546 23.4" rotation="90 0 0" radius="3" scale="0.6 0.5 0.3" color="darkblue"></a-sphere>
+      <a-cone id="cola1" position="0 7.25 -24.74" rotation="-75 0 0" radius="3" scale="2 4.5 2" color="white"></a-cone>
+      <a-cone id="cola2" position="0 5.96 -23.5" rotation="-90 0 0" radius="3" scale="3 2 3" color="white"></a-cone>
+      <!--Alas-->
+      <a-cone id="ala delante izquierda" position="13.5 5.2 0.5" rotation="86 110 0" radius="3" scale="6 28 1" color="gray"></a-cone>
+      <a-cone id="ala delante derecha" position="-13.5 5.2 0.5" rotation="-86 70 0" radius="3" scale="6 28 1" color="gray"></a-cone>
+      <a-cone id="ala atrás izquierda" position="7.5 6.1 -21" rotation="86 110 0" radius="3" scale="4 14 0.75" color="gray"></a-cone>
+      <a-cone id="ala atrás derecha" position="-7.5 6.1 -21" rotation="-86 70 0" radius="3" scale="4 14 0.75" color="gray"></a-cone>
+      <a-cone id="estabilizador vertical" position="0 13 -20.5" rotation="-20 0 0" radius="3" scale="1.3 14 5" color="gray"></a-cone>
+      <!--Motores-->
+      <a-cone id="soporte motor 1" position="-7.8 4.4 6.5" rotation="0 0 0" radius="3" scale="0.6 1 2" color="gray"></a-cone>
+      <a-cone id="soporte motor 2" position="7.8 4.4 6.5" rotation="0 0 0" radius="3" scale="0.6 1 2" color="gray"></a-cone>
+      <a-cone id="soporte motor 3" position="-12.3 4.75 3.5" rotation="0 0 0" radius="3" scale="0.6 1 2" color="gray"></a-cone>
+      <a-cone id="soporte motor 4" position="12.3 4.75 3.5" rotation="0 0 0" radius="3" scale="0.6 1 2" color="gray"></a-cone>
+      <a-cylinder id="motor izquierda" position="7.8 2.7 6" rotation="90 0 0" radius="3" scale="0.45 5 0.45" color="white" shadow></a-cylinder>
+      <a-cylinder id="motor izquierda 2" position="12.3 3.2 3" rotation="90 0 0" radius="3" scale="0.45 5 0.45" color="rgb(224,224,224)" shadow></a-cylinder>
+      <a-cylinder id="motor derecha" position="-7.8 2.7 6" rotation="90 0 0" radius="3" scale="0.45 5 0.45" color="white" shadow></a-cylinder>
+      <a-cylinder id="motor derecha 2" position="-12.3 3.2 3" rotation="90 0 0" radius="3" scale="0.45 5 0.45" color="rgb(224,224,224)" shadow></a-cylinder>
+      <!--Tren de aterrizaje simple por razones obvias-->
+      <!--Tren frontal-->
+      <a-cylinder id="tren morro" position="0 3 21" rotation="0 0 0" radius="3" scale="0.100 4 0.100" color="darkgray"></a-cylinder>
+      <a-cylinder id="rueda 1 tren morro" position="0.56 0.9 21" rotation="0 0 90" radius="3" scale="0.25 0.6 0.25" color="black"></a-cylinder>
+      <a-cylinder id="rueda 2 tren morro" position="-0.56 0.9 21" rotation="0 0 90" radius="3" scale="0.25 0.6 0.25" color="black"></a-cylinder>
+      <!--Tren trasero izquierda-->
+      <a-cylinder id="tren ala izquierda" position="2.8 3 3" rotation="0 0 0" radius="3" scale="0.100 4 0.100" color="darkgray"></a-cylinder>
+      <a-cylinder id="eje iq" position="-2.8 0.9 3" rotation="90 0 0" radius="3" scale="0.100 4.5 0.100" color="darkgray"></a-cylinder>
+      <a-cylinder id="rueda 1 izquierda" position="3.345 0.9 5" rotation="0 0 90" radius="3" scale="0.33 0.6 0.33" color="black"></a-cylinder>
+      <a-cylinder id="rueda 1 izquierda" position="3.345 0.9 3" rotation="0 0 90" radius="3" scale="0.33 0.6 0.33" color="black"></a-cylinder>
+      <a-cylinder id="rueda 1 izquierda" position="3.345 0.9 1" rotation="0 0 90" radius="3" scale="0.33 0.6 0.33" color="black"></a-cylinder>
+      <a-cylinder id="rueda 1 izquierda" position="2.2 0.9 5" rotation="0 0 90" radius="3" scale="0.33 0.6 0.33" color="black"></a-cylinder>
+      <a-cylinder id="rueda 1 izquierda" position="2.2 0.9 3" rotation="0 0 90" radius="3" scale="0.33 0.6 0.33" color="black"></a-cylinder>
+      <a-cylinder id="rueda 1 izquierda" position="2.2 0.9 1" rotation="0 0 90" radius="3" scale="0.33 0.6 0.33" color="black"></a-cylinder>
+      <!--Tren trasero derecha-->
+      <a-cylinder id="tren ala derecha" position="-2.8 3 3" rotation="0 0 0" radius="3" scale="0.100 4 0.100" color="darkgray"></a-cylinder>
+      <a-cylinder id="eje dr" position="2.8 0.9 3" rotation="90 0 0" radius="3" scale="0.100 4.5 0.100" color="darkgray"></a-cylinder>
+      <a-cylinder id="rueda 1 derecha" position="-3.345 0.9 5" rotation="0 0 90" radius="3" scale="0.33 0.6 0.33" color="black"></a-cylinder>
+      <a-cylinder id="rueda 2 derecha" position="-3.345 0.9 3" rotation="0 0 90" radius="3" scale="0.33 0.6 0.33" color="black"></a-cylinder>
+      <a-cylinder id="rueda 3 derecha" position="-3.345 0.9 1" rotation="0 0 90" radius="3" scale="0.33 0.6 0.33" color="black"></a-cylinder>
+      <a-cylinder id="rueda 4 derecha" position="-2.2 0.9 5" rotation="0 0 90" radius="3" scale="0.33 0.6 0.33" color="black"></a-cylinder>
+      <a-cylinder id="rueda 5 derecha" position="-2.2 0.9 3" rotation="0 0 90" radius="3" scale="0.33 0.6 0.33" color="black"></a-cylinder>
+      <a-cylinder id="rueda 6 derecha" position="-2.2 0.9 1" rotation="0 0 90" radius="3" scale="0.33 0.6 0.33" color="black"></a-cylinder>
+      <!--<a-cylinder id="rueda 1 derecha" position="2.56 0.9 21" rotation="0 0 90" radius="3" scale="0.25 0.6 0.25" color="red"></a-cylinder>-->
+      <!--Plano, ambiente-->
+      <a-plane position="0 0 0" rotation="-90 0 0" width="128" height="128" color="darkgreen" shadow></a-plane>
+      <a-plane position="0 0.1 0" rotation="-90 0 0" width="40" height="128" color="gray" shadow></a-plane>
+      <a-plane position="0 0.2 0" rotation="-90 0 0" width="2" height="6" color="white" shadow></a-plane>
+      <a-plane position="20 0.2 0" rotation="-90 0 0" width="2" height="128" color="white" shadow></a-plane>
+      <a-plane position="-20 0.2 0" rotation="-90 0 0" width="2" height="128" color="white" shadow></a-plane>
+      <!--Líneas de la pista-->
+      <a-plane position="0 0.2 16" rotation="-90 0 0" width="2" height="6" color="white" shadow></a-plane>
+      <a-plane position="0 0.2 32" rotation="-90 0 0" width="2" height="6" color="white" shadow></a-plane>
+      <a-plane position="0 0.2 48" rotation="-90 0 0" width="2" height="6" color="white" shadow></a-plane>
+      <a-plane position="0 0.2 62" rotation="-90 0 0" width="2" height="4" color="white" shadow></a-plane>
+      <a-plane position="0 0.2 -16" rotation="-90 0 0" width="2" height="6" color="white" shadow></a-plane>
+      <a-plane position="0 0.2 -32" rotation="-90 0 0" width="2" height="6" color="white" shadow></a-plane>
+      <a-plane position="0 0.2 -48" rotation="-90 0 0" width="2" height="6" color="white" shadow></a-plane>
+      <a-plane position="0 0.2 -62" rotation="-90 0 0" width="2" height="4" color="white" shadow></a-plane>
+      <a-sky color="lightblue"></a-sky>
+    </a-scene>
+  </body>
+</html>
